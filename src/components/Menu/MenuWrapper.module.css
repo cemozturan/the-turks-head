@@ -5,9 +5,7 @@
 
 .children {
   min-height: 500px;
-  position: relative;
-  top: 20px;
-  margin-top: 48px;
+  margin-top: 80px;
 }
 
 /* Mobile */

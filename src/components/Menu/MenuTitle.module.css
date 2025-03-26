@@ -1,0 +1,23 @@
+.container {
+  font-family: MyFont, sans-serif;
+  letter-spacing: 0.75px;
+  text-align: center;
+  border-bottom: 1px solid goldenrod;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.children {
+  margin-top: 80px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .container {
+    padding-bottom: 0.5rem;
+  }
+
+  .children {
+    margin-top: 40px;
+  }
+}
