@@ -5,10 +5,11 @@
   align-items: center;
   min-height: 100vh;
   background: white;
+  gap: 1rem;
 }
 
 /* Mobile */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .main {
     flex-direction: column;
   }

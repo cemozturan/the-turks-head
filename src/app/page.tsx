@@ -2,6 +2,7 @@
 import Drink from "@/components/Drink/Drink";
 import MenuTitle from "@/components/Menu/MenuTitle";
 import MenuWrapper from "@/components/Menu/MenuWrapper";
+import ModalBody from "@/components/Modal/ModalBody";
 import { TEXT_COLOR } from "@/constants/colors";
 import { COCKTAILS, DrinkItem, MOCKTAILS } from "@/constants/drinks";
 import { useState } from "react";
@@ -38,6 +39,7 @@ export default function Home() {
     );
     setSelectedDrink(selectedDrink);
   };
+
   return (
     <main className={styles.main}>
       <MenuWrapper>
@@ -74,19 +76,7 @@ export default function Home() {
             <Modal.Title>{selectedDrink?.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <div className="d-flex">
-              <img
-                src={selectedDrink?.image}
-                height="300px"
-                style={{ borderRadius: "0.5rem" }}
-                alt={selectedDrink?.title}
-              />
-              <div style={{ paddingLeft: "1rem" }}>
-                <p style={{ marginBottom: 0 }}>
-                  {selectedDrink?.modalDescription}
-                </p>
-              </div>
-            </div>
+            {selectedDrink && <ModalBody drink={selectedDrink} />}
           </Modal.Body>
           <Modal.Footer style={{ borderColor: "black" }}>
             <Button variant="secondary" onClick={handleClose}>
