@@ -1,5 +1,6 @@
 .container {
   width: 740px;
+  height: 100vh;
 }
 
 .children {
@@ -13,6 +14,7 @@
 @media (max-width: 700px) {
   .container {
     width: 100%;
+    height: unset;
   }
 
   .children {

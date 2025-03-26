@@ -3,12 +3,7 @@ import styles from "./MenuWrapper.module.css";
 
 const MenuWrapper = ({ children }: { children: ReactNode }) => {
   return (
-    <div
-      className={styles.container}
-      style={{
-        height: "100vh",
-      }}
-    >
+    <div className={styles.container}>
       <div
         className="d-flex flex-column"
         style={{
