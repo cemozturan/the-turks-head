@@ -1,5 +1,6 @@
 import { DrinkItem } from "@/constants/drinks";
 import Description from "./Description";
+import styles from "./Drink.module.css";
 import Ingredients from "./Ingredients";
 import Title from "./Title";
 
@@ -12,15 +13,7 @@ const Drink = ({
 }) => {
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          marginBottom: "1rem",
-        }}
-      >
+      <div className={styles.container}>
         <Title title={drink.title} onClick={() => onClick(drink.title)} />
         <Ingredients ingredients={drink.ingredients} />
         <Description description={drink.menuDescription} />

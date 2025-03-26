@@ -1,18 +1,7 @@
+import styles from "./Drink.module.css";
+
 const Description = ({ description }: { description: string }) => {
-  return (
-    <p
-      style={{
-        fontStyle: "italic",
-        fontSize: "xx-small",
-        fontWeight: "200",
-        fontFamily: "none",
-        marginBottom: 0,
-        lineHeight: "10px",
-      }}
-    >
-      {description}
-    </p>
-  );
+  return <p className={styles.description}>{description}</p>;
 };
 
 export default Description;

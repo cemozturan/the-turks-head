@@ -1,0 +1,56 @@
+.title {
+  font-family: MyFont, sans-serif;
+  font-size: x-large;
+  letter-spacing: 0.75px;
+  cursor: pointer;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+.ingredients {
+  font-family: MyFont, sans-serif;
+  font-size: large;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+  line-height: 24px;
+}
+
+.description {
+  font-style: italic;
+  font-size: small;
+  font-weight: 200;
+  font-family: none;
+  margin-bottom: 0;
+  line-height: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .title {
+    font-size: large;
+    line-height: 16px;
+  }
+
+  .ingredients {
+    font-size: x-small;
+    line-height: 12px;
+  }
+
+  .description {
+    font-size: xx-small;
+    line-height: 10px;
+  }
+
+  .container {
+    margin-bottom: 1rem;
+  }
+}
