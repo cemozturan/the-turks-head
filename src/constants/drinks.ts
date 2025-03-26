@@ -114,7 +114,8 @@ const A_LIFE_FULL_OF_PASSION: DrinkItem = {
   ingredients: ["Passion Fruit Syrup", "Tonic Water", "Lime"],
   menuDescription: "Drink this with passion or do not drink it at all",
   image: "./passion.png",
-  modalDescriptionTop: `The name "passion fruit" has a religious connotation, as Spanish missionaries in South America saw the flower of the passion fruit vine as a symbol of the Crucifixion of Christ. The arrangement of petals and other floral parts was thought to represent parts of the Passion story, hence the name. It was later introduced to Europe in 1553 by Spanish and Portuguese colonists.`,
+  modalDescriptionTop: `The name "passion fruit" has a religious connotation, as Spanish missionaries in South America saw the flower of the passion fruit vine as a symbol of the Crucifixion of Christ.`,
+  modalDescriptionBottom: `The arrangement of petals and other floral parts was thought to represent parts of the Passion story, hence the name. It was later introduced to Europe in 1553 by Spanish and Portuguese colonists.`,
 };
 
 const PEASED_TO_MEET_YOU: DrinkItem = {
@@ -122,7 +123,8 @@ const PEASED_TO_MEET_YOU: DrinkItem = {
   ingredients: ["Peas", "Seedlip Herbal", "Yogurt", "Lemon Juice"],
   menuDescription: "A highly experimental mocktail for the bravest",
   image: "./peas.png",
-  modalDescriptionTop: `This might be an awful drink, or a masterpiece. We, the founders of the Turk's Head based in East London, have no idea what our customers will think of this drink. However, despite caring A LOT, we also feel obliged to say that a tiny teeny little microscopic part of us doesn't really a give shit about our customers' thoughts on drinks they pay nothing for.`,
+  modalDescriptionTop: `This might be an awful drink, or a masterpiece. We, the founders of the Turk's Head based in East London, have no idea what our customers will think of this drink.`,
+  modalDescriptionBottom: `However, despite caring A LOT, we also feel obliged to say that a tiny teeny little microscopic part of us doesn't really a give shit about our customers' thoughts on drinks they pay nothing for.`,
 };
 
 const OUR_BLUEBERRY_NIGHTS: DrinkItem = {
@@ -130,7 +132,8 @@ const OUR_BLUEBERRY_NIGHTS: DrinkItem = {
   ingredients: ["Blueberries", "Ginger Beer", "Lemon Juice", "Mint"],
   menuDescription: "No ginger, no beer, no relation to 'My Blueberry Nights'",
   image: "./blueberries.png",
-  modalDescriptionTop: `Blueberries consist of 14% carbohydrates, 0.7% protein, 0.3% fat, and 84% water. They contain only negligible amounts of micronutrients, with moderate levels (relative to respective Daily Values) of the essential dietary mineral manganese, vitamin C, vitamin K and dietary fiber. A 100-gram serving provides a relatively low amount of food energy – 240 kilojoules (57 kcal) – with a glycemic load of 6.`,
+  modalDescriptionTop: `Blueberries consist of 14% carbohydrates, 0.7% protein, 0.3% fat, and 84% water. A 100-gram serving provides a relatively low amount of food energy – 240 kilojoules (57 kcal) – with a glycemic load of 6.`,
+  modalDescriptionBottom: `They contain only negligible amounts of micronutrients, with moderate levels (relative to respective Daily Values) of the essential dietary mineral manganese, vitamin C, vitamin K and dietary fiber.`,
 };
 
 const TYHME_FOR_A_TREAT: DrinkItem = {
@@ -139,7 +142,8 @@ const TYHME_FOR_A_TREAT: DrinkItem = {
   menuDescription:
     "If you think this would go really well with gin, please remember you are drinking a mocktail",
   image: "./thyme.png",
-  modalDescriptionTop: `Well, Thyme For A Treat means it is thyme for a cozy short story... Rumor has it Pooja rearranged the labels on her in-laws' spice rack. I am sure we can all agree that it was not anise gesture. Perhaps it was the fennel straw, who knows?..  Nobody in the Cuthbertson household has noticed yet, but let me tell you, the thyme is cumin.`,
+  modalDescriptionTop: `Well, Thyme For A Treat means it is thyme for a cozy short story... Rumor has it Pooja rearranged the labels on her in-laws' spice rack. I am sure we can all agree that it was not anise gesture.`,
+  modalDescriptionBottom: `Perhaps it was the fennel straw, who knows?..  Nobody in the Cuthbertson household has noticed yet, but let me tell you, the thyme is cumin.`,
 };
 
 const PAINKILLER: DrinkItem = {
@@ -148,7 +152,8 @@ const PAINKILLER: DrinkItem = {
   menuDescription:
     "If you have pain that needs to be killed, this is one way to achieve that",
   image: "./painkiller.png",
-  modalDescriptionTop: `Developed by head chemist Maurice Treneer and launched in 1931, Alka-Seltzer is a pain reliever owned by Bayer since 1978. First marketed by the Dr. Miles Medicine Company of Indiana, it contains three active ingredients: aspirin (a pain reliever and anti-inflammatory), sodium bicarbonate (an antacid), and anhydrous citric acid (reacts with the sodium bicarbonate and water to form effervescence).`,
+  modalDescriptionTop: `Developed by head chemist Maurice Treneer and launched in 1931, Alka-Seltzer is a pain reliever owned by Bayer since 1978.`,
+  modalDescriptionBottom: `First marketed by the Dr. Miles Medicine Company of Indiana, it contains three active ingredients: aspirin (a pain reliever and anti-inflammatory), sodium bicarbonate (an antacid), and anhydrous citric acid (reacts with the sodium bicarbonate and water to form effervescence).`,
 };
 
 export const MOCKTAILS = {
