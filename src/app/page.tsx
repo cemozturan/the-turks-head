@@ -1,95 +1,100 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+import Drink from "@/components/Drink/Drink";
+import MenuTitle from "@/components/Menu/MenuTitle";
+import MenuWrapper from "@/components/Menu/MenuWrapper";
+import { TEXT_COLOR } from "@/constants/colors";
+import { COCKTAILS, DrinkItem, MOCKTAILS } from "@/constants/drinks";
+import { useState } from "react";
+import { Button, Modal } from "react-bootstrap";
+import styles from "./page.module.css";
+
+const ALCOHOLIC_DRINKS: DrinkItem[] = [
+  COCKTAILS.BRAMBLE,
+  COCKTAILS.CORPSE_REVIVER_NO_2,
+  COCKTAILS.WHISKEY_SOUR,
+  COCKTAILS.MARTINI,
+  COCKTAILS.CHRYSANTHEMUM,
+  COCKTAILS.AVIATION,
+  COCKTAILS.LAST_WORD,
+];
+
+const NON_ALCOHOLIC_DRINKS: DrinkItem[] = [
+  MOCKTAILS.A_LIFE_FULL_OF_PASSION,
+  MOCKTAILS.OUR_BLUEBERRY_NIGHTS,
+  MOCKTAILS.TYHME_FOR_A_TREAT,
+  MOCKTAILS.PEASED_TO_MEET_YOU,
+  MOCKTAILS.PAINKILLER,
+];
 
 export default function Home() {
+  const [selectedDrink, setSelectedDrink] = useState<DrinkItem | undefined>(
+    undefined
+  );
+
+  const handleClose = () => setSelectedDrink(undefined);
+  const handleShow = (drinkTitle: string) => {
+    const selectedDrink = [...ALCOHOLIC_DRINKS, ...NON_ALCOHOLIC_DRINKS].find(
+      (x) => x.title === drinkTitle
+    );
+    setSelectedDrink(selectedDrink);
+  };
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <MenuWrapper>
+        <MenuTitle />
+        <div style={{ color: TEXT_COLOR }}>
+          {ALCOHOLIC_DRINKS.map((drink) => {
+            return (
+              <Drink
+                key={drink.title}
+                drink={drink}
+                onClick={(drinkTitle: string) => handleShow(drinkTitle)}
+              />
+            );
+          })}
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </MenuWrapper>
+      <MenuWrapper>
+        <MenuTitle title="Mocktails" />
+        <div style={{ color: TEXT_COLOR }}>
+          {NON_ALCOHOLIC_DRINKS.map((drink) => {
+            return (
+              <Drink
+                key={drink.title}
+                drink={drink}
+                onClick={(drinkTitle: string) => handleShow(drinkTitle)}
+              />
+            );
+          })}
+        </div>
+      </MenuWrapper>
+      <Modal show={!!selectedDrink} onHide={handleClose} centered>
+        <div style={{ backgroundColor: "#fff8c5", borderRadius: "8px" }}>
+          <Modal.Header closeButton style={{ borderColor: "black" }}>
+            <Modal.Title>{selectedDrink?.title}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <div className="d-flex">
+              <img
+                src={selectedDrink?.image}
+                height="300px"
+                style={{ borderRadius: "0.5rem" }}
+                alt={selectedDrink?.title}
+              />
+              <div style={{ paddingLeft: "1rem" }}>
+                <p style={{ marginBottom: 0 }}>
+                  {selectedDrink?.modalDescription}
+                </p>
+              </div>
+            </div>
+          </Modal.Body>
+          <Modal.Footer style={{ borderColor: "black" }}>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </div>
+      </Modal>
     </main>
-  )
+  );
 }
