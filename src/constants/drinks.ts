@@ -27,7 +27,8 @@ const BRAMBLE: DrinkItem = {
   ingredients: ["Gin", "Creme de Mure", "Lemon Juice", "Spices"],
   menuDescription: "A favorite of our beloved AJ, created in 80s, London",
   image: "./bramble.png",
-  modalDescriptionTop: `The Bramble was created in London, in 1984, by Dick Bradsell. At the time, Bradsell worked at a bar in Soho called Fred's Club, and he wanted to create a British cocktail. Memories of going blackberrying in his childhood on the Isle of Wight provided the inspiration for the Bramble. The name of the drink comes from the fact that blackberry bushes are called brambles.`,
+  modalDescriptionTop: `The Bramble was created in London, in 1984, by Dick Bradsell. At the time, Bradsell worked at a bar in Soho called Fred's Club, and he wanted to create a British cocktail.`,
+  modalDescriptionBottom: `Memories of going blackberrying in his childhood on the Isle of Wight provided the inspiration for the Bramble. The name of the drink comes from the fact that blackberry bushes are called brambles.`,
 };
 
 const CHRYSANTHEMUM: DrinkItem = {
@@ -36,7 +37,8 @@ const CHRYSANTHEMUM: DrinkItem = {
   menuDescription:
     "An aromatic cocktail with a delicate balance of herbal and floral notes",
   image: "./chrysanthemum.png",
-  modalDescriptionTop: `This century-old classic is believed to have first appeared in “Recipes for Mixed Drinks” by Hugo R. Ensslin, which hit the market in 1916. With vermouth in the driver’s seat, the Chrysanthemum is light and elegant, with a touch of absinthe to sharpen the edges. And because its base is low-proof, it’s a good aperitif and a solid option any time you want to dial back the booze.`,
+  modalDescriptionTop: `This century-old classic is believed to have first appeared in “Recipes for Mixed Drinks” by Hugo R. Ensslin, which hit the market in 1916.`,
+  modalDescriptionBottom: `With vermouth in the driver’s seat, the Chrysanthemum is light and elegant, with a touch of absinthe to sharpen the edges. And because its base is low-proof, it’s a good aperitif and a solid option any time you want to dial back the booze.`,
 };
 
 const CORPSE_REVIVER_NO_2: DrinkItem = {
@@ -45,7 +47,8 @@ const CORPSE_REVIVER_NO_2: DrinkItem = {
   menuDescription:
     "The traditional first drink of the night at the Turk's Head",
   image: "./corpse-reviver-2.png",
-  modalDescriptionTop: `The Corpse Reviver No. 2 is a classic drink that belongs to a family of pre-Prohibition cocktails that were said to be created and consumed for the chief purpose of rousing the drinker from the dead—in other words, meant to cure hangovers, increase vigor and otherwise improve one’s morning.`,
+  modalDescriptionTop: `The Corpse Reviver No. 2 is a classic drink that belongs to a family of pre-Prohibition cocktails that were said to be created and consumed for only one purpose: `,
+  modalDescriptionBottom: `Rousing the drinker from the dead—in other words, meant to cure hangovers, increase vigor and otherwise improve one’s morning.`,
 };
 
 const COQUITO: DrinkItem = {
@@ -62,7 +65,8 @@ const LAST_WORD: DrinkItem = {
   ingredients: ["Gin", "Chartreuse", "Maraschino Liqueur", "Lime"],
   menuDescription: "Feeling the need to have the last word is quite normal",
   image: "./last-word.png",
-  modalDescriptionTop: `The Last Word is a gin-based cocktail originating at the Detroit Athletic Club in the 1910s, shortly before the start of Prohibition. After a long period of obscurity, it enjoyed a renewed popularity in the cocktail renaissance of the early 2000s after being discovered by bartender Murray Stenson of the Zig Zag Café in Seattle.`,
+  modalDescriptionTop: `The Last Word is a gin-based cocktail originating at the Detroit Athletic Club in the 1910s, shortly before the start of Prohibition.`,
+  modalDescriptionBottom: `After a long period of obscurity, it enjoyed a renewed popularity in the cocktail renaissance of the early 2000s after being discovered by bartender Murray Stenson of the Zig Zag Café in Seattle.`,
 };
 
 const MARTINI: DrinkItem = {
@@ -70,7 +74,8 @@ const MARTINI: DrinkItem = {
   ingredients: ["Gin", "Vermouth", "Orange Bitters"],
   menuDescription: "Spirit forward, sweet, stirred, with olive garnish",
   image: "./martini.png",
-  modalDescriptionTop: `Helena's favorite drink. But who mixed the world’s first Martini? Was it a California prospector during the 1849 Gold Rush or the barman at a New York City hotel 50 years later? Most likely, the Martini is a cocktail that came onto the scene in multiple places at once, as an increasing number of bartenders began to experiment with gin and vermouth.`,
+  modalDescriptionTop: `Helena's favorite drink. But who mixed the world’s first Martini? Was it a California prospector during the 1849 Gold Rush or the barman at a New York City hotel 50 years later?`,
+  modalDescriptionBottom: `Most likely, the Martini is a cocktail that came onto the scene in multiple places at once, as an increasing number of bartenders began to experiment with gin and vermouth.`,
 };
 
 const MONTE_CARLO: DrinkItem = {
@@ -88,7 +93,8 @@ const WHISKEY_SOUR: DrinkItem = {
   menuDescription:
     "Simon's favorite, prepared at the Turk's Head with a secret ingredient",
   image: "./whiskey-sour.png",
-  modalDescriptionTop: `The Whiskey Sour, Simon's favorite drink, has sated thirsty drinkers for more than one and a half centuries. It’s unknown exactly when the cocktail was conceived but its history stretches back to at least the administration of Abraham Lincoln, and the first printed recipe appeared circa 1862 in Jerry Thomas's book The Bar-Tenders Guide.`,
+  modalDescriptionTop: `The Whiskey Sour, Simon's favorite drink, has sated thirsty drinkers for more than one and a half centuries.`,
+  modalDescriptionBottom: `It’s unknown exactly when the cocktail was conceived but its history stretches back to at least the administration of Abraham Lincoln, and the first printed recipe appeared circa 1862 in Jerry Thomas's book The Bar-Tenders Guide.`,
 };
 
 export const COCKTAILS = {
