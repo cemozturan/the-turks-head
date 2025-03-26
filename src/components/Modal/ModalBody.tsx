@@ -1,8 +1,8 @@
 import { DrinkItem } from "@/constants/drinks";
-import useMediaQuery from "@/hooks/useMediaQuery";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 const ModalBody = ({ drink }: { drink: DrinkItem }) => {
-  const isMobile = useMediaQuery(768);
+  const isMobile = useIsMobile();
 
   const Image = (
     <img
@@ -12,8 +12,6 @@ const ModalBody = ({ drink }: { drink: DrinkItem }) => {
       alt={drink.title}
     />
   );
-
-  console.log({ isMobile });
 
   if (isMobile) {
     return (
