@@ -24,7 +24,7 @@ const AVIATION: DrinkItem = {
 
 const BRAMBLE: DrinkItem = {
   title: "Bramble",
-  ingredients: ["Gin", "Creme de Mure", "Lemon Juice", "Spices"],
+  ingredients: ["Gin", "Creme de Mure", "Lemon Juice", "Syrup"],
   menuDescription: "A favorite of our beloved AJ, created in 80s, London",
   image: "./bramble.png",
   modalDescriptionTop: `The Bramble was created in London, in 1984, by Dick Bradsell. At the time, Bradsell worked at a bar in Soho called Fred's Club, and he wanted to create a British cocktail.`,
@@ -89,7 +89,7 @@ const MONTE_CARLO: DrinkItem = {
 
 const WHISKEY_SOUR: DrinkItem = {
   title: "Whiskey Sour",
-  ingredients: ["Rye Whiskey", "Egg White", "Lemon Juice", "Simple Syrup"],
+  ingredients: ["Rye Whiskey", "Egg White", "Lemon Juice", "Syrup"],
   menuDescription:
     "Simon's favorite, prepared at the Turk's Head with a secret ingredient",
   image: "./whiskey-sour.png",
