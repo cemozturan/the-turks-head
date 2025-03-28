@@ -97,14 +97,20 @@ export default function Home() {
         </div>
       </MenuWrapper>
       <Modal show={!!selectedDrink} onHide={handleClose} centered>
-        <div style={{ backgroundColor: "#fff8c5", borderRadius: "8px" }}>
-          <Modal.Header closeButton style={{ borderColor: "black" }}>
+        <div
+          style={{
+            backgroundColor: "#fff8c5",
+            borderRadius: "8px",
+            color: "darkred",
+          }}
+        >
+          <Modal.Header closeButton style={{ borderColor: "darkred" }}>
             <Modal.Title>{selectedDrink?.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             {selectedDrink && <ModalBody drink={selectedDrink} />}
           </Modal.Body>
-          <Modal.Footer style={{ borderColor: "black" }}>
+          <Modal.Footer style={{ borderColor: "darkred" }}>
             <Button variant="secondary" onClick={handleClose}>
               Close
             </Button>

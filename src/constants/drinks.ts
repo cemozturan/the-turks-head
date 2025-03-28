@@ -18,7 +18,7 @@ const AMARETTO_SOUR: DrinkItem = {
 };
 
 const AVIATION: DrinkItem = {
-  title: "Aviation",
+  title: "PoojAviation",
   ingredients: [
     "Gin",
     "Maraschino Liqueur",
@@ -42,7 +42,7 @@ const BOULEVARDIER: DrinkItem = {
 };
 
 const BRAMBLE: DrinkItem = {
-  title: "Bramble",
+  title: "BrAdamble",
   ingredients: ["Gin", "Creme de Mure", "Lemon Juice", "Syrup"],
   menuDescription: "A favorite of our beloved AJ, created in the '80s, London",
   image: "./bramble.png",
