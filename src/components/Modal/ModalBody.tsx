@@ -8,31 +8,29 @@ const ModalBody = ({ drink }: { drink: DrinkItem }) => {
     <img
       src={drink.image}
       height="300px"
-      style={{ borderRadius: "0.5rem", marginRight: "1rem" }}
+      style={{ borderRadius: "0.5rem", marginBottom: "1rem" }}
       alt={drink.title}
     />
   );
 
-  if (isMobile) {
-    return (
-      <div className="d-flex flex-column">
-        <div className="d-flex flex-row">
-          {Image}
-          <p style={{ marginBottom: 0 }}>{drink.modalDescriptionTop}</p>
-        </div>
-        <p style={{ marginTop: "1rem" }}>{drink.modalDescriptionBottom}</p>
-      </div>
-    );
-  }
+  // if (isMobile) {
+  //   return (
+  //     <div className="d-flex flex-column">
+  //       <div className="d-flex flex-row">
+  //         {Image}
+  //         <p style={{ marginBottom: 0 }}>{drink.modalDescriptionTop}</p>
+  //       </div>
+  //       <p style={{ marginTop: "1rem" }}>{drink.modalDescriptionBottom}</p>
+  //     </div>
+  //   );
+  // }
 
   return (
-    <div className="d-flex">
+    <div className="d-flex flex-column">
       {Image}
-      <div style={{ paddingLeft: "1rem" }}>
-        <p style={{ marginBottom: 0 }}>
-          {drink.modalDescriptionTop} {drink.modalDescriptionBottom}
-        </p>
-      </div>
+      <p>
+        {drink.modalDescriptionTop} {drink.modalDescriptionBottom}
+      </p>
     </div>
   );
 };
