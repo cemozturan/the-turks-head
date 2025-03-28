@@ -9,7 +9,7 @@ import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import styles from "./page.module.css";
 
-const ALCOHOLIC_DRINKS: DrinkItem[] = [
+const ALCOHOLIC_DRINKS_1: DrinkItem[] = [
   COCKTAILS.BRAMBLE,
   COCKTAILS.CORPSE_REVIVER_NO_2,
   COCKTAILS.WHISKEY_SOUR,
@@ -17,6 +17,16 @@ const ALCOHOLIC_DRINKS: DrinkItem[] = [
   COCKTAILS.CHRYSANTHEMUM,
   COCKTAILS.AVIATION,
   COCKTAILS.LAST_WORD,
+];
+
+const ALCOHOLIC_DRINKS_2: DrinkItem[] = [
+  COCKTAILS.BOULEVARDIER,
+  COCKTAILS.ENZONI,
+  COCKTAILS.AMARETTO_SOUR,
+  COCKTAILS.SENTIMENTAL_GENTLEMAN,
+  COCKTAILS.MONTE_CARLO,
+  COCKTAILS.ORIGINAL_VENETIAN,
+  COCKTAILS.COQUITO,
 ];
 
 const NON_ALCOHOLIC_DRINKS: DrinkItem[] = [
@@ -34,18 +44,34 @@ export default function Home() {
 
   const handleClose = () => setSelectedDrink(undefined);
   const handleShow = (drinkTitle: string) => {
-    const selectedDrink = [...ALCOHOLIC_DRINKS, ...NON_ALCOHOLIC_DRINKS].find(
-      (x) => x.title === drinkTitle
-    );
+    const selectedDrink = [
+      ...ALCOHOLIC_DRINKS_1,
+      ...ALCOHOLIC_DRINKS_2,
+      ...NON_ALCOHOLIC_DRINKS,
+    ].find((x) => x.title === drinkTitle);
     setSelectedDrink(selectedDrink);
   };
 
   return (
-    <main className={styles.main}>
+    <main className={styles.gridContainer}>
       <MenuWrapper>
         <MenuTitle />
         <div style={{ color: TEXT_COLOR }}>
-          {ALCOHOLIC_DRINKS.map((drink) => {
+          {ALCOHOLIC_DRINKS_1.map((drink) => {
+            return (
+              <Drink
+                key={drink.title}
+                drink={drink}
+                onClick={(drinkTitle: string) => handleShow(drinkTitle)}
+              />
+            );
+          })}
+        </div>
+      </MenuWrapper>
+      <MenuWrapper>
+        <MenuTitle />
+        <div style={{ color: TEXT_COLOR }}>
+          {ALCOHOLIC_DRINKS_2.map((drink) => {
             return (
               <Drink
                 key={drink.title}

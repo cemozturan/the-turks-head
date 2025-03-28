@@ -1,16 +1,15 @@
-.main {
-  display: flex;
-  flex-direction: row;
+.gridContainer {
+  display: grid;
   justify-content: space-around;
   align-items: center;
-  min-height: 100vh;
   background: white;
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-  .main {
-    flex-direction: column;
+  .gridContainer {
+    grid-template-columns: 1fr;
   }
 }

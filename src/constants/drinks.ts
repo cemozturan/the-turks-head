@@ -7,6 +7,16 @@ export type DrinkItem = {
   modalDescriptionBottom?: string;
 };
 
+const AMARETTO_SOUR: DrinkItem = {
+  title: "Amaretto Sour",
+  ingredients: ["Amaretto", "Bourbon", "Lemon Juice", "Syrup"],
+  menuDescription:
+    "Originated in the '70s as a take on the classic sour template of drinks",
+  image: "./amaretto-sour.png",
+  modalDescriptionTop: `Unfortunately, as the drink aged through the '80s and '90s, prefabricated artificial "sour mix" began to replace fresh lemon and sugar in high-volume bars across the globe.`,
+  modalDescriptionBottom: `These mixers were especially detrimental to the Amaretto Sour, creating a double dose of sugar that led the cocktail to be associated with a super saccharine profile. Portland bartender and author, Jeffrey Morgenthaler, saved the drink's reputation by using fresh ingredients and adding in a cask-strength bourbon whiskey. Amaretto liqueur is too sweet and weak on its own, so the higher-strength whiskey adds proof, cutting back it's sweetness, whilst the fresh egg white adds a velvety texture.`,
+};
+
 const AVIATION: DrinkItem = {
   title: "Aviation",
   ingredients: [
@@ -22,10 +32,19 @@ const AVIATION: DrinkItem = {
   modalDescriptionBottom: `In the ensuing decades, it was all but forgotten. That’s because one of the drink’s primary ingredients, crème de violette liqueur, disappeared from the market during the 1960s.`,
 };
 
+const BOULEVARDIER: DrinkItem = {
+  title: "Boulevardier",
+  ingredients: ["Bourbon", "Campari", "Cocchi Vermouth"],
+  menuDescription: "Pretty much a Negroni with bourbon replacing gin",
+  image: "./boulevardier.png",
+  modalDescriptionTop: `The Boulevardier, published in Paris from 1927 to 1932, was modelled after The New Yorker and featured an impressive roster of contributors, including the likes of Noël Coward, Sinclair Lewis and Ernest Hemingway.`,
+  modalDescriptionBottom: `It originated as an obscure cocktail in late 1920s Paris, and was largely forgotten for 80 years, before being rediscovered in the late 2000s as part of the craft cocktail movement, rapidly rising in popularity in the 2010s as a variant of the negroni, and becoming an IBA official cocktail (recognised by the International Bartenders Association to be the most requested recipes) in 2020.`,
+};
+
 const BRAMBLE: DrinkItem = {
   title: "Bramble",
   ingredients: ["Gin", "Creme de Mure", "Lemon Juice", "Syrup"],
-  menuDescription: "A favorite of our beloved AJ, created in 80s, London",
+  menuDescription: "A favorite of our beloved AJ, created in the '80s, London",
   image: "./bramble.png",
   modalDescriptionTop: `The Bramble was created in London, in 1984, by Dick Bradsell. At the time, Bradsell worked at a bar in Soho called Fred's Club, and he wanted to create a British cocktail.`,
   modalDescriptionBottom: `Memories of going blackberrying in his childhood on the Isle of Wight provided the inspiration for the Bramble. The name of the drink comes from the fact that blackberry bushes are called brambles.`,
@@ -33,7 +52,7 @@ const BRAMBLE: DrinkItem = {
 
 const CHRYSANTHEMUM: DrinkItem = {
   title: "Chrysanthemum",
-  ingredients: ["Vermouth", "Bénédictine Liqueur", "Absinthe"],
+  ingredients: ["Vermouth", "Bénédictine", "Absinthe"],
   menuDescription:
     "An aromatic cocktail with a delicate balance of herbal and floral notes",
   image: "./chrysanthemum.png",
@@ -55,9 +74,21 @@ const COQUITO: DrinkItem = {
   title: "Coquito",
   ingredients: ["Rum", "Coconut Cream", "Coconut Milk", "Spices"],
   menuDescription:
-    "A traditional Puerto Rican Christmas drink with 1000 different recipes",
-  image: "",
-  modalDescriptionTop: "",
+    "A traditional Puerto Rican drink that is only available during Christmas",
+  image: "./coquito.png",
+  modalDescriptionTop:
+    "Coquito ('little coconut') is a traditional Christmas drink that originated in Puerto Rico. The coconut-based alcoholic beverage is similar to eggnog, and is sometimes referred to as Puerto Rican Eggnog.",
+  modalDescriptionBottom:
+    "Many families have their own variations of the recipe that are passed down through generations. The drink will be seen as early as Thanksgiving and as late as Día de los Reyes. That being said the drink makes its main appearance during the Christmas season.",
+};
+
+const ENZONI: DrinkItem = {
+  title: "Enzoni",
+  ingredients: ["Gin", "Campari", "Lemon Juice", "Syrup"],
+  menuDescription: "A modern classic and a big hit among cocktail lovers",
+  image: "./enzoni.png",
+  modalDescriptionTop: `The Enzoni is a cross between a Negroni and a Gin Sour where the Sweet Vermouth comes in the form of muddled green grapes. An ideal drink to introduce a novice to Campari!`,
+  modalDescriptionBottom: `First created in 2001 by Vincenzo Errico whilst tending bar at Milk & Honey, NYC. Vincenzo was trained by the legendary Dick Bradsell (creator of the Espresso Martini).`,
 };
 
 const LAST_WORD: DrinkItem = {
@@ -80,11 +111,35 @@ const MARTINI: DrinkItem = {
 
 const MONTE_CARLO: DrinkItem = {
   title: "Monte Carlo",
-  ingredients: ["Rye Whiskey", "Bénédictine Liqueur", "Aromatic Bitters"],
+  ingredients: ["Rye Whiskey", "Bénédictine", "Aromatic Bitters"],
   menuDescription:
     "A harmonious blend of robust spice, herbal complexity, and subtle sweetness",
-  image: "",
-  modalDescriptionTop: "",
+  image: "./monte-carlo.png",
+  modalDescriptionTop:
+    "Nobody really knows where the Monte Carlo cocktail came from, but it first appears in print in David Embury's 1948 The Fine Art of Mixing Drinks.",
+  modalDescriptionBottom:
+    "When served straight-up, the Monte Carlo fits into the Scaffa family of cocktails, but it's much better and more usually served on-the-rocks, so best described as being a Manhattan with Bénédictine in place of vermouth.",
+};
+
+const ORIGINAL_VENETIAN: DrinkItem = {
+  title: "Original Venetian Spritz",
+  ingredients: ["Prosecco", "Select Spritz", "Soda Water"],
+  menuDescription:
+    "A refreshing aperitif that deserves more love than Aperol Spritz",
+  image: "./original-venetian.png",
+  modalDescriptionTop:
+    "Select became the star of the Venetian cocktail scene in the 1920s, and is still recognized as the classic Venetian Aperitif. It is made by carefully blending 30 botanicals, including juniper berries and rhubarb roots.",
+  modalDescriptionBottom:
+    "The Original Venetian Spritz offers a discerning and sophisticated flavour which is not too sweet, not too bitter, but just the perfect balance.",
+};
+
+const SENTIMENTAL_GENTLEMAN: DrinkItem = {
+  title: "Sentimental Gentleman",
+  ingredients: ["Scotch Whisky", "Bénédictine", "Walnut Liqueur"],
+  menuDescription: "A smooth sipper that is not as famous as it should be",
+  image: "./sentimental-gentleman.png",
+  modalDescriptionTop: `The Sentimental Gentleman, a smooth sipper that was created by Boston bartender, Misty Kalkofen. If you like a cocktail like the Rusty Nail or the Godfather, you’re going to love this one.`,
+  modalDescriptionBottom: `In addition to being smoother than an old fashioned, it is also quite sentimental and it will have you thinking of grand ol’ times`,
 };
 
 const WHISKEY_SOUR: DrinkItem = {
@@ -98,14 +153,19 @@ const WHISKEY_SOUR: DrinkItem = {
 };
 
 export const COCKTAILS = {
+  AMARETTO_SOUR,
   AVIATION,
+  BOULEVARDIER,
   BRAMBLE,
   CHRYSANTHEMUM,
   COQUITO,
   CORPSE_REVIVER_NO_2,
+  ENZONI,
   LAST_WORD,
   MARTINI,
   MONTE_CARLO,
+  ORIGINAL_VENETIAN,
+  SENTIMENTAL_GENTLEMAN,
   WHISKEY_SOUR,
 };
 
