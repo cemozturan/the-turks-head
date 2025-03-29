@@ -62,3 +62,9 @@
     display: block;
   }
 }
+
+@media (max-width: 374px) {
+  .container {
+    margin-bottom: 0.65rem;
+  }
+}
