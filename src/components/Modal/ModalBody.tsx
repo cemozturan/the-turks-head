@@ -7,7 +7,7 @@ const ModalBody = ({ drink }: { drink: DrinkItem }) => {
   const Image = (
     <img
       src={drink.image}
-      height="300px"
+      height={drink.isPortrait ? "500px" : "300px"}
       style={{ borderRadius: "0.5rem", marginBottom: "1rem" }}
       alt={drink.title}
     />

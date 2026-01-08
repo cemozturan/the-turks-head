@@ -5,6 +5,7 @@ export type DrinkItem = {
   image: string;
   modalDescriptionTop: string;
   modalDescriptionBottom?: string;
+  isPortrait?: boolean;
 };
 
 const AMARETTO_SOUR: DrinkItem = {
@@ -25,9 +26,10 @@ const AVIATION: DrinkItem = {
     "Creme de Violette",
     "Lemon Juice",
   ],
+  isPortrait: true,
   menuDescription:
     "A bright and floral gin-based cocktail that was first published in 1916",
-  image: "./aviation.png",
+  image: "./aviation.jpg",
   modalDescriptionTop: `Being Pooja's favorite, the Aviation is a classic gin cocktail that first appeared in Huge Enslinn’s book “Recipes for Mixed Drinks” in 1916.`,
   modalDescriptionBottom: `In the ensuing decades, it was all but forgotten. That’s because one of the drink’s primary ingredients, crème de violette liqueur, disappeared from the market during the 1960s.`,
 };
@@ -35,8 +37,9 @@ const AVIATION: DrinkItem = {
 const BOULEVARDIER: DrinkItem = {
   title: "Boulevardier",
   ingredients: ["Bourbon", "Campari", "Cocchi Vermouth"],
+  isPortrait: true,
   menuDescription: "Pretty much a Negroni with bourbon replacing gin",
-  image: "./boulevardier.png",
+  image: "./boulevardier.jpg",
   modalDescriptionTop: `The Boulevardier, published in Paris from 1927 to 1932, was modelled after The New Yorker and featured an impressive roster of contributors, including the likes of Noël Coward, Sinclair Lewis and Ernest Hemingway.`,
   modalDescriptionBottom: `It originated as an obscure cocktail in late 1920s Paris, and was largely forgotten for 80 years, before being rediscovered in the late 2000s as part of the craft cocktail movement, rapidly rising in popularity in the 2010s as a variant of the negroni, and becoming an IBA official cocktail (recognised by the International Bartenders Association to be the most requested recipes) in 2020.`,
 };
@@ -63,9 +66,10 @@ const CHRYSANTHEMUM: DrinkItem = {
 const CORPSE_REVIVER_NO_2: DrinkItem = {
   title: "Corpse Reviver #2",
   ingredients: ["Gin", "Aperitif Wine", "Orange Liqueur", "Absinthe"],
+  isPortrait: true,
   menuDescription:
     "The traditional first drink of the night at the Turk's Head",
-  image: "./corpse-reviver-2.png",
+  image: "./corpse-reviver-2.jpg",
   modalDescriptionTop: `The Corpse Reviver No. 2 is a classic drink that belongs to a family of pre-Prohibition cocktails that were said to be created and consumed for only one purpose: `,
   modalDescriptionBottom: `Rousing the drinker from the dead—in other words, meant to cure hangovers, increase vigor and otherwise improve one’s morning.`,
 };
@@ -93,7 +97,7 @@ const ENZONI: DrinkItem = {
 
 const LAST_WORD: DrinkItem = {
   title: "Last Word",
-  ingredients: ["Gin", "Chartreuse", "Maraschino Liqueur", "Lime"],
+  ingredients: ["Gin", "Chartreuse", "Maraschino Liqueur", "Lime Juice"],
   menuDescription: "Feeling the need to have the last word is quite normal",
   image: "./last-word.png",
   modalDescriptionTop: `The Last Word is a gin-based cocktail originating at the Detroit Athletic Club in the 1910s, shortly before the start of Prohibition.`,
@@ -133,6 +137,19 @@ const ORIGINAL_VENETIAN: DrinkItem = {
     "The Original Venetian Spritz offers a discerning and sophisticated flavour which is not too sweet, not too bitter, but just the perfect balance.",
 };
 
+const PAPER_PLANE: DrinkItem = {
+  title: "Paper Plane",
+  ingredients: ["Bourbon Whiskey", "Amaro Nonino", "Aperol", "Lemon Juice"],
+  isPortrait: true,
+  menuDescription:
+    "A moder classic often described as a bittersweet and citrusy twist on a whiskey sour",
+  image: "./paper-plane.jpg",
+  modalDescriptionTop:
+    "created in 2007 by Sam Ross for The Violet Hour in Chicago, Illinois. He first made it with Amaro Nonino Quintessentia and Campari but switched Campari out for a less bitter aperitivo liqueur soon after creating the cocktail when he started making it at New York's Milk & Honey.",
+  modalDescriptionBottom:
+    'Sam says, "This cocktail is named after the M.I.A. track that was blasting on repeat the summer we worked on the drink."',
+};
+
 const SENTIMENTAL_GENTLEMAN: DrinkItem = {
   title: "Sentimental Gentleman",
   ingredients: ["Scotch Whisky", "Bénédictine", "Walnut Liqueur"],
@@ -162,6 +179,19 @@ const WHISKEY_SOUR: DrinkItem = {
   modalDescriptionBottom: `It’s unknown exactly when the cocktail was conceived but its history stretches back to at least the administration of Abraham Lincoln, and the first printed recipe appeared circa 1862 in Jerry Thomas's book The Bar-Tenders Guide.`,
 };
 
+const YALAPENIS: DrinkItem = {
+  title: "Yalapenis",
+  ingredients: [
+    "Blanco Tequila",
+    "Special cucumber & jalapeño mix",
+    "Soda Water",
+  ],
+  menuDescription:
+    "Random & nameless recipe from the internet, might be nice, might be shit...",
+  image: "./yalapenis.jpg",
+  modalDescriptionTop: `Until we know more about it, this one is a mystery... Supposed to be refreshing and spicy at the same time, but take it with a pinch of salt (pun intended).`,
+};
+
 export const COCKTAILS = {
   AMARETTO_SOUR,
   AVIATION,
@@ -175,9 +205,11 @@ export const COCKTAILS = {
   MARTINI,
   MONTE_CARLO,
   ORIGINAL_VENETIAN,
+  PAPER_PLANE,
   SENTIMENTAL_GENTLEMAN,
   TOREADOR,
   WHISKEY_SOUR,
+  YALAPENIS,
 };
 
 const A_LIFE_FULL_OF_PASSION: DrinkItem = {
