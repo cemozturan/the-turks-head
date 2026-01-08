@@ -18,7 +18,7 @@ const AMARETTO_SOUR: DrinkItem = {
 };
 
 const AVIATION: DrinkItem = {
-  title: "PoojAviation",
+  title: "Aviation",
   ingredients: [
     "Gin",
     "Maraschino Liqueur",
@@ -42,7 +42,7 @@ const BOULEVARDIER: DrinkItem = {
 };
 
 const BRAMBLE: DrinkItem = {
-  title: "BrAdamble",
+  title: "Bramble",
   ingredients: ["Gin", "Creme de Mure", "Lemon Juice", "Syrup"],
   menuDescription: "A favorite of our beloved AJ, created in the '80s, London",
   image: "./bramble.png",
@@ -142,6 +142,16 @@ const SENTIMENTAL_GENTLEMAN: DrinkItem = {
   modalDescriptionBottom: `In addition to being smoother than an old fashioned, it is also quite sentimental and it will have you thinking of grand ol’ times`,
 };
 
+const TOREADOR: DrinkItem = {
+  title: "Toreador",
+  ingredients: ["Blanco Tequila", "Apricot Liqueur", "Lime Juice", "Syrup"],
+  menuDescription:
+    "A popular classic in Australia, but not well-known elsewhere.",
+  image: "./toreador.png",
+  modalDescriptionTop: `Apricot liqueur replaces triple sec in what otherwise follows a broadly classic Margarita recipe.`,
+  modalDescriptionBottom: `This variation on the Margarita was first published in William J. "Billy" Tarling's 1937 Café Royal Bar Book. It was Punch Drink's 4th most popular cocktail recipe in 2024.`,
+};
+
 const WHISKEY_SOUR: DrinkItem = {
   title: "Whiskey Sour",
   ingredients: ["Rye Whiskey", "Egg White", "Lemon Juice", "Syrup"],
@@ -166,6 +176,7 @@ export const COCKTAILS = {
   MONTE_CARLO,
   ORIGINAL_VENETIAN,
   SENTIMENTAL_GENTLEMAN,
+  TOREADOR,
   WHISKEY_SOUR,
 };
 
