@@ -145,7 +145,7 @@ const PAPER_PLANE: DrinkItem = {
     "A moder classic often described as a bittersweet and citrusy twist on a whiskey sour",
   image: "./paper-plane.jpg",
   modalDescriptionTop:
-    "created in 2007 by Sam Ross for The Violet Hour in Chicago, Illinois. He first made it with Amaro Nonino Quintessentia and Campari but switched Campari out for a less bitter aperitivo liqueur soon after creating the cocktail when he started making it at New York's Milk & Honey.",
+    "Created in 2007 by Sam Ross for The Violet Hour in Chicago, Illinois. He first made it with Amaro Nonino Quintessentia and Campari but switched Campari out for a less bitter aperitivo liqueur soon after creating the cocktail when he started making it at New York's Milk & Honey.",
   modalDescriptionBottom:
     'Sam says, "This cocktail is named after the M.I.A. track that was blasting on repeat the summer we worked on the drink."',
 };
