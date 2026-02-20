@@ -8,6 +8,7 @@ import { COCKTAILS, DrinkItem, MOCKTAILS } from "@/constants/drinks";
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import styles from "./page.module.css";
+import Image from "next/image";
 
 const ALCOHOLIC_DRINKS_1: DrinkItem[] = [
   COCKTAILS.BRAMBLE,
@@ -53,70 +54,86 @@ export default function Home() {
   };
 
   return (
-    <main className={styles.gridContainer}>
-      <MenuWrapper>
-        <MenuTitle />
-        <div style={{ color: TEXT_COLOR }}>
-          {ALCOHOLIC_DRINKS_1.map((drink) => {
-            return (
-              <Drink
-                key={drink.title}
-                drink={drink}
-                onClick={(drinkTitle: string) => handleShow(drinkTitle)}
-              />
-            );
-          })}
-        </div>
-      </MenuWrapper>
-      <MenuWrapper>
-        <MenuTitle />
-        <div style={{ color: TEXT_COLOR }}>
-          {ALCOHOLIC_DRINKS_2.map((drink) => {
-            return (
-              <Drink
-                key={drink.title}
-                drink={drink}
-                onClick={(drinkTitle: string) => handleShow(drinkTitle)}
-              />
-            );
-          })}
-        </div>
-      </MenuWrapper>
-      <MenuWrapper>
-        <MenuTitle title="Mocktails" />
-        <div style={{ color: TEXT_COLOR }}>
-          {NON_ALCOHOLIC_DRINKS.map((drink) => {
-            return (
-              <Drink
-                key={drink.title}
-                drink={drink}
-                onClick={(drinkTitle: string) => handleShow(drinkTitle)}
-              />
-            );
-          })}
-        </div>
-      </MenuWrapper>
-      <Modal show={!!selectedDrink} onHide={handleClose} centered>
-        <div
-          style={{
-            backgroundColor: "#fff8c5",
-            borderRadius: "8px",
-            color: "darkred",
-          }}
-        >
-          <Modal.Header closeButton style={{ borderColor: "darkred" }}>
-            <Modal.Title>{selectedDrink?.title}</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            {selectedDrink && <ModalBody drink={selectedDrink} />}
-          </Modal.Body>
-          <Modal.Footer style={{ borderColor: "darkred" }}>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </div>
-      </Modal>
+    // <main className={styles.gridContainer}>
+    //   <MenuWrapper>
+    //     <MenuTitle />
+    //     <div style={{ color: TEXT_COLOR }}>
+    //       {ALCOHOLIC_DRINKS_1.map((drink) => {
+    //         return (
+    //           <Drink
+    //             key={drink.title}
+    //             drink={drink}
+    //             onClick={(drinkTitle: string) => handleShow(drinkTitle)}
+    //           />
+    //         );
+    //       })}
+    //     </div>
+    //   </MenuWrapper>
+    //   <MenuWrapper>
+    //     <MenuTitle />
+    //     <div style={{ color: TEXT_COLOR }}>
+    //       {ALCOHOLIC_DRINKS_2.map((drink) => {
+    //         return (
+    //           <Drink
+    //             key={drink.title}
+    //             drink={drink}
+    //             onClick={(drinkTitle: string) => handleShow(drinkTitle)}
+    //           />
+    //         );
+    //       })}
+    //     </div>
+    //   </MenuWrapper>
+    //   <MenuWrapper>
+    //     <MenuTitle title="Mocktails" />
+    //     <div style={{ color: TEXT_COLOR }}>
+    //       {NON_ALCOHOLIC_DRINKS.map((drink) => {
+    //         return (
+    //           <Drink
+    //             key={drink.title}
+    //             drink={drink}
+    //             onClick={(drinkTitle: string) => handleShow(drinkTitle)}
+    //           />
+    //         );
+    //       })}
+    //     </div>
+    //   </MenuWrapper>
+    //   <Modal show={!!selectedDrink} onHide={handleClose} centered>
+    //     <div
+    //       style={{
+    //         backgroundColor: "#fff8c5",
+    //         borderRadius: "8px",
+    //         color: "darkred",
+    //       }}
+    //     >
+    //       <Modal.Header closeButton style={{ borderColor: "darkred" }}>
+    //         <Modal.Title>{selectedDrink?.title}</Modal.Title>
+    //       </Modal.Header>
+    //       <Modal.Body>
+    //         {selectedDrink && <ModalBody drink={selectedDrink} />}
+    //       </Modal.Body>
+    //       <Modal.Footer style={{ borderColor: "darkred" }}>
+    //         <Button variant="secondary" onClick={handleClose}>
+    //           Close
+    //         </Button>
+    //       </Modal.Footer>
+    //     </div>
+    //   </Modal>
+    // </main>
+    <main style={{ display: "flex", flexDirection: "column" }}>
+      <Image
+        src="daily-cover.png"
+        alt={""}
+        height="600"
+        width="300"
+        style={{ width: "auto" }}
+      />
+      <Image
+        src="daily-drinks.png"
+        alt={""}
+        height="600"
+        width="300"
+        style={{ width: "auto" }}
+      />
     </main>
   );
 }
