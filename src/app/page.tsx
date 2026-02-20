@@ -43,7 +43,7 @@ export default function Home() {
     undefined
   );
 
-  const [showDaily, setShowDaily] = useState(true);
+  const [showDaily, setShowDaily] = useState(false);
 
   const handleClose = () => setSelectedDrink(undefined);
   const handleShow = (drinkTitle: string) => {
@@ -163,6 +163,7 @@ export default function Home() {
                 flexDirection: "column",
                 gap: 2,
                 overflow: "scroll",
+                height: "600px",
               }}
             >
               <Image
