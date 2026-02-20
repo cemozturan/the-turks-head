@@ -43,6 +43,8 @@ export default function Home() {
     undefined
   );
 
+  const [showDaily, setShowDaily] = useState(true);
+
   const handleClose = () => setSelectedDrink(undefined);
   const handleShow = (drinkTitle: string) => {
     const selectedDrink = [
@@ -52,6 +54,9 @@ export default function Home() {
     ].find((x) => x.title === drinkTitle);
     setSelectedDrink(selectedDrink);
   };
+
+  const handleDailyClose = () => setShowDaily(false);
+  const handleDailyShow = () => setShowDaily(true);
 
   return (
     // <main className={styles.gridContainer}>
@@ -120,6 +125,12 @@ export default function Home() {
     //   </Modal>
     // </main>
     <main style={{ display: "flex", flexDirection: "column" }}>
+      <Button
+        style={{ position: "absolute", top: "8px", right: "8px" }}
+        onClick={handleDailyShow}
+      >
+        Drink Responsibly
+      </Button>
       <Image
         src="daily-cover.png"
         alt={""}
@@ -134,6 +145,63 @@ export default function Home() {
         width="300"
         style={{ width: "auto" }}
       />
+      <Modal show={!!showDaily} onHide={handleDailyClose} centered>
+        <div
+          style={{
+            backgroundColor: "#fff8c5",
+            borderRadius: "8px",
+            color: "darkred",
+          }}
+        >
+          <Modal.Header closeButton style={{ borderColor: "darkred" }}>
+            <Modal.Title>These people did not.</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: 2,
+                overflow: "scroll",
+              }}
+            >
+              <Image
+                src="aviation.jpg"
+                alt={""}
+                height="240"
+                width="120"
+                style={{ width: "auto" }}
+              />
+              <Image
+                src="aviation.jpg"
+                alt={""}
+                height="240"
+                width="120"
+                style={{ width: "auto" }}
+              />
+              <Image
+                src="aviation.jpg"
+                alt={""}
+                height="240"
+                width="120"
+                style={{ width: "auto" }}
+              />
+              <Image
+                src="aviation.jpg"
+                alt={""}
+                height="240"
+                width="120"
+                style={{ width: "auto" }}
+              />
+            </div>
+          </Modal.Body>
+          <Modal.Footer style={{ borderColor: "darkred" }}>
+            <Button variant="secondary" onClick={handleDailyClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </div>
+      </Modal>
     </main>
   );
 }
