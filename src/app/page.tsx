@@ -129,7 +129,7 @@ export default function Home() {
         style={{ position: "absolute", top: "8px", right: "8px" }}
         onClick={handleDailyShow}
       >
-        Drink Responsibly
+        Drink responsibly
       </Button>
       <Image
         src="daily-cover.png"
@@ -154,45 +154,66 @@ export default function Home() {
           }}
         >
           <Modal.Header closeButton style={{ borderColor: "darkred" }}>
-            <Modal.Title>These people did not.</Modal.Title>
+            <Modal.Title>These people did not drink responsibly.</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <div
               style={{
                 display: "flex",
                 flexDirection: "column",
-                gap: 2,
+                gap: 24,
                 overflow: "scroll",
                 height: "600px",
               }}
             >
               <Image
-                src="aviation.jpg"
+                src="drunk-1.png"
                 alt={""}
-                height="240"
+                height="300"
                 width="120"
-                style={{ width: "auto" }}
+                style={{ width: "auto", height: "auto" }}
               />
               <Image
-                src="aviation.jpg"
+                src="drunk-2.jpg"
                 alt={""}
                 height="240"
                 width="120"
-                style={{ width: "auto" }}
+                style={{ width: "auto", height: "auto" }}
               />
               <Image
-                src="aviation.jpg"
+                src="drunk-3.png"
                 alt={""}
                 height="240"
                 width="120"
-                style={{ width: "auto" }}
+                style={{ width: "auto", height: "auto" }}
               />
               <Image
-                src="aviation.jpg"
+                src="drunk-4.png"
                 alt={""}
                 height="240"
                 width="120"
-                style={{ width: "auto" }}
+                style={{ width: "auto", height: "auto" }}
+              />
+              <Image
+                src="drunk-5.png"
+                alt={""}
+                height="240"
+                width="120"
+                style={{ width: "auto", height: "auto" }}
+              />
+              <Image
+                src="drunk-6.jpg"
+                alt={""}
+                height="240"
+                width="120"
+                style={{ width: "auto", height: "auto" }}
+              />
+              <Image
+                src="drunk-7.png"
+                alt={""}
+                height="240"
+                width="120"
+                style={{ width: "auto", height: "auto" }}
               />
             </div>
           </Modal.Body>
