@@ -9,6 +9,7 @@ import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import styles from "./page.module.css";
 import Image from "next/image";
+import { OpenModalIcon } from "@/components/Drink/Title";
 
 const ALCOHOLIC_DRINKS_1: DrinkItem[] = [
   COCKTAILS.BRAMBLE,
@@ -125,12 +126,14 @@ export default function Home() {
     //   </Modal>
     // </main>
     <main style={{ display: "flex", flexDirection: "column" }}>
-      <Button
-        style={{ position: "absolute", top: "8px", right: "8px" }}
-        onClick={handleDailyShow}
-      >
-        Drink responsibly
-      </Button>
+      <div style={{ display: "flex", width: "100%", justifyContent: "center" }}>
+        <Button
+          style={{ position: "absolute", top: "600px" }}
+          onClick={handleDailyShow}
+        >
+          Drink responsibly
+        </Button>
+      </div>
       <Image
         src="daily-cover.png"
         alt={""}

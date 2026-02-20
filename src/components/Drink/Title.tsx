@@ -1,7 +1,7 @@
 import { TEXT_COLOR } from "@/constants/colors";
 import styles from "./Drink.module.css";
 
-const OpenModalIcon = () => {
+export const OpenModalIcon = () => {
   return (
     <svg
       className={styles.icon}
